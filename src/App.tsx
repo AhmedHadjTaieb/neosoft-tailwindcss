@@ -1,24 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {ToggleTheme} from "./theme/ToggleTheme";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App bg-gradient-to-br from-primary_dark to-secondary_dark dark:from-primary dark:to-secondary h-screen w-screen">
+      <h1 className="text-3xl font-bold underline">
+        Hello world!
+      </h1>
+
+        <ToggleTheme></ToggleTheme>
     </div>
   );
 }
