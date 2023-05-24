@@ -5,8 +5,8 @@
 @layer base {
     :root {
         --color-primary: 241 222 102;
-        --color-secondary: '#bdad66';
-        --color-primary_dark: '#f2ebbe';
-        --color-secondary_dark: '#dcd9be';
+        --color-secondary: 189 173 102;
+        --color-primary_dark: 242 235 190;
+        --color-secondary_dark: 220 217 190;
     }
 }

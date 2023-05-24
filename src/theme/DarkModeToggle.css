@@ -1,0 +1,20 @@
+input:checked + label {
+    @apply bg-neutral-800
+}
+input:checked + label:after {
+    @apply left-[77px] bg-gradient-to-b from-neutral-500 to-neutral-700 -translate-x-full
+}
+label, label:after {
+   @apply delay-100
+}
+
+label svg {
+    @apply absolute w-[18px] top-[12px] z-[100]
+}
+
+input:checked + label svg.sun {
+    @apply fill-neutral-500
+}
+input:checked + label svg.moon {
+    @apply fill-white
+}

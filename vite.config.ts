@@ -1,16 +1,22 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-
+import svgr from 'vite-plugin-svgr';
 export default defineConfig({
-    server: {
-        port: 4200,
-        host: 'localhost',
+  resolve: {
+    alias: {
+      '@': '/public',
     },
-    plugins: [
-        react({
-            babel: {
-                plugins: ['preval']
-            }
-        }),
-    ],
+  },
+  server: {
+    port: 4200,
+    host: 'localhost',
+  },
+  plugins: [
+    react({
+      babel: {
+        plugins: ['preval'],
+      },
+    }),
+    svgr({}),
+  ],
 });
