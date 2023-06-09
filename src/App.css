@@ -1,5 +1,5 @@
 .text-animation {
     @apply max-w-[calc(100%-24px)] animate-text self-center overflow-y-auto truncate bg-gradient-to-r
     from-teal-500 via-purple-500 to-orange-500 bg-clip-text font-mono font-black
-    font-bold text-transparent text-xl md:capitalize lg:text-4xl lg:uppercase
+    font-bold text-transparent text-xl md:capitalize lg:text-2xl lg:uppercase
 }

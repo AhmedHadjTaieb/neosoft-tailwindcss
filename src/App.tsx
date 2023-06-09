@@ -13,7 +13,6 @@ function App(): JSX.Element {
         return await response.json();
       })
       .then((data) => {
-        console.log(data);
         setThemes(data);
       })
       .catch((e: Error) => {
