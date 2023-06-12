@@ -3,12 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-    :root {
-        --color-primary: 241 222 102;
-        --color-secondary: 189 173 102;
-        --color-primary_dark: 242 235 190;
-        --color-secondary_dark: 220 217 190;
-    }
     @font-face {
         font-family: 'Montserrat';
         src: url('/font/Montserrat.ttf');

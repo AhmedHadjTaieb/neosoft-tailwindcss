@@ -4,45 +4,14 @@ import { fontFamily } from 'tailwindcss/defaultTheme';
 
 export default {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
-  safelist: [
-    {
-      pattern: /cursor-(fox|frog|chick|monkey)/,
-    },
-  ],
   darkMode: 'class',
   theme: {
     colors: {
+      chick: '#4E740D',
+      fox: '# C46406',
+      monkey: '#69432E ',
+      frog: '#4E740D ',
       transparent: colors.transparent,
-      primary: 'rgb(var(--color-primary) / <alpha-value>)',
-      secondary: 'rgb(var(--color-secondary) / <alpha-value>)',
-      primary_dark: 'rgb(var(--color-primary_dark) / <alpha-value>)',
-      secondary_dark: 'rgb(var(--color-secondary_dark) / <alpha-value>)',
-      gradient: 'var(--color-gradient)',
-      gradient_dark: 'var(--color-gradient_dark)',
-      chick: {
-        primary: '241 222 102',
-        secondary: '189 173 102',
-        primary_dark: '242 235 190',
-        secondary_dark: '220 217 190',
-      },
-      fox: {
-        primary: '196 100 6',
-        secondary: '97 76 55',
-        primary_dark: '213 183 125',
-        secondary_dark: '172 121 61',
-      },
-      monkey: {
-        primary: '105 67 46',
-        secondary: '77 43 30',
-        primary_dark: '164 140 125',
-        secondary_dark: '213 188 175',
-      },
-      frog: {
-        primary: '78 116 13',
-        secondary: '107 105 34',
-        primary_dark: '113 162 31',
-        secondary_dark: '174 184 82',
-      },
     },
     fontFamily: {
       sans: ['Montserrat', ...fontFamily.sans],
@@ -87,9 +56,6 @@ export default {
         monkey:
           "url(\"data:image/svg+xml;utf8, <svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' style='font-size: 24px'><text y='20'>🐵</text></svg>\"), pointer",
       },
-    },
-    container: {
-      center: true,
     },
   },
   plugins: [],
