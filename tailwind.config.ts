@@ -17,8 +17,6 @@ export default {
       secondary: 'rgb(var(--color-secondary) / <alpha-value>)',
       primary_dark: 'rgb(var(--color-primary_dark) / <alpha-value>)',
       secondary_dark: 'rgb(var(--color-secondary_dark) / <alpha-value>)',
-      gradient: 'var(--color-gradient)',
-      gradient_dark: 'var(--color-gradient_dark)',
       chick: {
         primary: '241 222 102',
         secondary: '189 173 102',

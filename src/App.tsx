@@ -1,17 +1,15 @@
 import React, { type ChangeEvent, useEffect, useState } from 'react';
 import './App.css';
-import { ToggleTheme } from './theme/ToggleTheme';
-import { DarkModeToggle } from './theme/DarkModeToggle';
-import type ITheme from './theme/Itheme';
+import { Menu } from './Menu/Menu';
+import { DarkModeToggle } from './theme/ToggleMode/DarkModeToggle';
+import type ITheme from './theme/model/Itheme';
 function App(): JSX.Element {
   const [themes, setThemes] = useState<ITheme[]>([]);
   const [activeTheme, setActiveTheme] = useState<ITheme | undefined>();
   const [animalName, setAnimalName] = useState<string>('');
   const fetchAnimals = (): void => {
     fetch('./data/animals.json')
-      .then(async (response) => {
-        return await response.json();
-      })
+      .then(async (response) => await response.json())
       .then((data) => {
         setThemes(data);
       })
@@ -19,6 +17,7 @@ function App(): JSX.Element {
         console.log(e.message);
       });
   };
+
   useEffect(() => {
     fetchAnimals();
   }, []);
@@ -42,7 +41,7 @@ function App(): JSX.Element {
         <DarkModeToggle></DarkModeToggle>
       </div>
       <div className="flex items-center">
-        <ToggleTheme
+        <Menu
           themes={themes}
           changeThemeToggle={(animal) => {
             changeAnimal(animal);

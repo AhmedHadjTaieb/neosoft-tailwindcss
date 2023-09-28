@@ -1,0 +1,22 @@
+[
+  {
+    "name": "chick",
+    "picture": "🐥",
+    "description": "Sunny, a fluffy little chick with bright yellow feathers. What name would you choose for this adorable baby bird?"
+  },
+  {
+    "name": "frog",
+    "picture": "🐸",
+    "description": "Jumpy, a lively frog with a vibrant green complexion. What name would you give to this energetic amphibian?"
+  },
+  {
+    "name": "monkey",
+    "picture": "🐵",
+    "description": "Banana, a playful monkey swinging through the trees. What name would you choose for this cheeky primate?"
+  },
+  {
+    "name": "fox",
+    "picture": "🦊",
+    "description": "Rusty, a cunning fox with a fiery coat. What name would you give to this sly creature?"
+  }
+]

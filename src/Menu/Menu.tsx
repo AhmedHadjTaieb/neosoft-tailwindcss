@@ -1,13 +1,13 @@
-import tailwindThemeConfig from './tailwind-theme';
-import './ToggleTheme.css';
-import type ITheme from './Itheme';
+import tailwindThemeConfig from '../theme/config/tailwind-theme';
+import './Menu.css';
+import type ITheme from '../theme/model/Itheme';
 
 interface IProps {
   themes: ITheme[];
   activeTheme: string | undefined;
   changeThemeToggle: (theme: string) => void;
 }
-export const ToggleTheme = (props: IProps): JSX.Element => {
+export const Menu = (props: IProps): JSX.Element => {
   function changeTheme(theme: string): void {
     const colors = (tailwindThemeConfig.theme as any).colors[theme];
     const root = document.documentElement;
@@ -19,21 +19,22 @@ export const ToggleTheme = (props: IProps): JSX.Element => {
 
   return (
     <div
-      className="h-18 container mt-6
-        flex w-2/4 content-center justify-around rounded-full
-        lg:border-4 lg:border-solid
-        lg:border-slate-700 lg:bg-gray-300/40 lg:p-1 lg:shadow-inner
-        lg:shadow-gray-800 lg:backdrop-blur
-        lg:dark:border-slate-300 lg:dark:bg-slate-50/40"
+      className="h-18 lg:border-slate-700 lg:dark:border-slate-300
+        lg:dark:bg-slate-50/40 container mt-6 flex w-4/5
+        content-center
+        justify-around rounded-full
+        sm:w-2/4 lg:border-4 lg:border-solid lg:bg-gray-300/40
+        lg:p-1 lg:shadow-inner
+        lg:shadow-gray-800 lg:backdrop-blur"
     >
       {props.themes?.map((theme) => (
         <button
-          className={`m-2 h-12 w-12 
-          rounded-full border border-solid border-slate-300 text-md 
+          className={`border-slate-300 m-2 h-12 
+          w-12 rounded-full border border-solid text-md 
           shadow-md hover:shadow-inner 
-          lg:rounded-lg cursor-${theme.name} ${
-            props.activeTheme === theme.name ? 'bg-gray-400/30' : 'silver'
-          }`}
+          lg:rounded-lg cursor-${theme.name} 
+          ${props.activeTheme === theme.name ? 'bg-gray-400/30' : 'silver'}
+          `}
           key={theme.name}
           onClick={() => {
             changeTheme(theme.name);
